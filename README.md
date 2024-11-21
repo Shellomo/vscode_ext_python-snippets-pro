@@ -1,8 +1,8 @@
-# Python Snippets Pro 🐍 - Better then AI
+# Python Snippets Pro 🐍 - Better than AI
 
 > Modern Python snippet manager with a beautiful UI and seamless VS Code integration.
 
-![Banner](media/python-snippets-banner.png)
+![Banner](media/demo.gif)
 
 ## Features ✨
 

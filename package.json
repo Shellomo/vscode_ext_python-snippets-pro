@@ -1,0 +1,68 @@
+{
+  "name": "python-snippets-pro",
+  "displayName": "Python Snippets Pro 🐍 - Better than AI",
+  "description": "✨ Modern Python (3) snippets with a beautiful UI browser. Boost your productivity with customizable, searchable code snippets.",
+  "version": "1.0.0",
+  "publisher": "Shellomo",
+  "icon": "media/logo.png",
+  "license": "MIT",
+  "repository": "https://github.com/Shellomo/vscode_ext_python-snippets-pro",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "python",
+    "python3",
+    "snippets",
+    "productivity",
+    "code snippets",
+    "copilot",
+    "tired-from-ai",
+    "not-ai-but-snippets"
+  ],
+  "activationEvents": [
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "python-snippets.showSnippets",
+        "title": "Show Python Snippets (Quick Pick)"
+      },
+      {
+        "command": "python-snippets.showSnippetsWebview",
+        "title": "Show Python Snippets (Browser)"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile && npm run lint"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.x",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2"
+  }
+}
