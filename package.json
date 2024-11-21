@@ -1,8 +1,8 @@
 {
   "name": "python-snippets-pro",
-  "displayName": "Python Snippets Pro 🐍 - Better than AI",
+  "displayName": "Python Snippets Pro",
   "description": "✨ Modern Python (3) snippets with a beautiful UI browser. Boost your productivity with customizable, searchable code snippets.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "Shellomo",
   "icon": "media/logo.png",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "theme": "dark"
   },
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Snippets",
