@@ -1,0 +1,729 @@
+{
+    "Try Except": {
+        "prefix": "try",
+        "body": [
+            "try:",
+            "    ${1:pass}",
+            "except Exception as e:",
+            "    print(f'Error: {e}')"
+        ],
+        "description": "Try-except block",
+        "category": "Error Handling",
+        "tags": [
+            "error",
+            "exception"
+        ]
+    },
+    "Function Definition": {
+        "prefix": "def",
+        "body": [
+            "def ${1:function_name}(${2:parameters}):",
+            "    ${3:pass}"
+        ],
+        "description": "Function definition",
+        "category": "Functions",
+        "tags": [
+            "function",
+            "definition"
+        ]
+    },
+    "Class Definition": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName}:",
+            "    def __init__(self${2:, parameters}):",
+            "        ${3:pass}"
+        ],
+        "description": "Class definition",
+        "category": "Classes",
+        "tags": [
+            "class",
+            "oop"
+        ]
+    },
+    "List Comprehension": {
+        "prefix": "lc",
+        "body": [
+            "[${1:expression} for ${2:item} in ${3:iterable}]"
+        ],
+        "description": "List comprehension",
+        "category": "Collections",
+        "tags": [
+            "list",
+            "comprehension"
+        ]
+    },
+    "Dictionary Comprehension": {
+        "prefix": "dc",
+        "body": [
+            "{${1:key}: ${2:value} for ${3:item} in ${4:iterable}}"
+        ],
+        "description": "Dictionary comprehension",
+        "category": "Collections",
+        "tags": [
+            "dict",
+            "comprehension"
+        ]
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for ${1:item} in ${2:iterable}:",
+            "    ${3:pass}"
+        ],
+        "description": "For loop",
+        "category": "Control Flow",
+        "tags": [
+            "loop",
+            "iteration"
+        ]
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while ${1:condition}:",
+            "    ${2:pass}"
+        ],
+        "description": "While loop",
+        "category": "Control Flow",
+        "tags": [
+            "loop",
+            "iteration"
+        ]
+    },
+    "If Else": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition}:",
+            "    ${2:pass}",
+            "else:",
+            "    ${3:pass}"
+        ],
+        "description": "If-else statement",
+        "category": "Control Flow",
+        "tags": [
+            "conditional",
+            "flow"
+        ]
+    },
+    "Lambda Function": {
+        "prefix": "lam",
+        "body": [
+            "lambda ${1:x}: ${2:expression}"
+        ],
+        "description": "Lambda function",
+        "category": "Functions",
+        "tags": [
+            "lambda",
+            "anonymous"
+        ]
+    },
+    "Context Manager": {
+        "prefix": "with",
+        "body": [
+            "with ${1:expression} as ${2:variable}:",
+            "    ${3:pass}"
+        ],
+        "description": "Context manager",
+        "category": "Resource Management",
+        "tags": [
+            "context",
+            "resource"
+        ]
+    },
+    "Async Function": {
+        "prefix": "async",
+        "body": [
+            "async def ${1:function_name}(${2:parameters}):",
+            "    ${3:pass}"
+        ],
+        "description": "Async function definition",
+        "category": "Async",
+        "tags": [
+            "async",
+            "coroutine"
+        ]
+    },
+    "Await Expression": {
+        "prefix": "await",
+        "body": [
+            "await ${1:coroutine}"
+        ],
+        "description": "Await expression",
+        "category": "Async",
+        "tags": [
+            "async",
+            "await"
+        ]
+    },
+    "File Read": {
+        "prefix": "read",
+        "body": [
+            "with open('${1:filename}', 'r') as f:",
+            "    ${2:content} = f.read()"
+        ],
+        "description": "Read file content",
+        "category": "File IO",
+        "tags": [
+            "file",
+            "read"
+        ]
+    },
+    "File Write": {
+        "prefix": "write",
+        "body": [
+            "with open('${1:filename}', 'w') as f:",
+            "    f.write(${2:content})"
+        ],
+        "description": "Write to file",
+        "category": "File IO",
+        "tags": [
+            "file",
+            "write"
+        ]
+    },
+    "Decorator": {
+        "prefix": "dec",
+        "body": [
+            "def ${1:decorator_name}(func):",
+            "    def wrapper(*args, **kwargs):",
+            "        ${2:pass}",
+            "        return func(*args, **kwargs)",
+            "    return wrapper"
+        ],
+        "description": "Function decorator",
+        "category": "Decorators",
+        "tags": [
+            "decorator",
+            "wrapper"
+        ]
+    },
+    "Property Decorator": {
+        "prefix": "prop",
+        "body": [
+            "@property",
+            "def ${1:property_name}(self):",
+            "    return ${2:value}"
+        ],
+        "description": "Property decorator",
+        "category": "Decorators",
+        "tags": [
+            "property",
+            "getter"
+        ]
+    },
+    "Import": {
+        "prefix": "imp",
+        "body": [
+            "import ${1:module}"
+        ],
+        "description": "Import statement",
+        "category": "Modules",
+        "tags": [
+            "import",
+            "module"
+        ]
+    },
+    "From Import": {
+        "prefix": "fimp",
+        "body": [
+            "from ${1:module} import ${2:component}"
+        ],
+        "description": "From import statement",
+        "category": "Modules",
+        "tags": [
+            "import",
+            "from"
+        ]
+    },
+    "Assert": {
+        "prefix": "ass",
+        "body": [
+            "assert ${1:condition}, ${2:message}"
+        ],
+        "description": "Assert statement",
+        "category": "Testing",
+        "tags": [
+            "assert",
+            "test"
+        ]
+    },
+    "Unit Test": {
+        "prefix": "test",
+        "body": [
+            "def test_${1:function_name}():",
+            "    ${2:pass}"
+        ],
+        "description": "Unit test function",
+        "category": "Testing",
+        "tags": [
+            "test",
+            "unit"
+        ]
+    },
+    "Argparse": {
+        "prefix": "arg",
+        "body": [
+            "parser = argparse.ArgumentParser(description='${1:description}')",
+            "parser.add_argument('${2:name}', help='${3:help_text}')",
+            "args = parser.parse_args()"
+        ],
+        "description": "Command line argument parser",
+        "category": "CLI",
+        "tags": [
+            "argparse",
+            "cli"
+        ]
+    },
+    "JSON Load": {
+        "prefix": "jload",
+        "body": [
+            "with open('${1:filename}.json', 'r') as f:",
+            "    ${2:data} = json.load(f)"
+        ],
+        "description": "Load JSON file",
+        "category": "Data",
+        "tags": [
+            "json",
+            "load"
+        ]
+    },
+    "JSON Dump": {
+        "prefix": "jdump",
+        "body": [
+            "with open('${1:filename}.json', 'w') as f:",
+            "    json.dump(${2:data}, f, indent=4)"
+        ],
+        "description": "Dump to JSON file",
+        "category": "Data",
+        "tags": [
+            "json",
+            "dump"
+        ]
+    },
+    "Logging Setup": {
+        "prefix": "log",
+        "body": [
+            "logging.basicConfig(",
+            "    level=logging.${1:INFO},",
+            "    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'",
+            ")"
+        ],
+        "description": "Setup logging configuration",
+        "category": "Logging",
+        "tags": [
+            "logging",
+            "debug"
+        ]
+    },
+    "Regex Pattern": {
+        "prefix": "re",
+        "body": [
+            "pattern = re.compile(r'${1:pattern}')",
+            "match = pattern.search(${2:string})"
+        ],
+        "description": "Regular expression pattern",
+        "category": "Regex",
+        "tags": [
+            "regex",
+            "pattern"
+        ]
+    },
+    "Generator": {
+        "prefix": "gen",
+        "body": [
+            "def ${1:generator_name}(${2:parameters}):",
+            "    while ${3:condition}:",
+            "        yield ${4:value}"
+        ],
+        "description": "Generator function",
+        "category": "Functions",
+        "tags": [
+            "generator",
+            "yield"
+        ]
+    },
+    "Time Measurement": {
+        "prefix": "time",
+        "body": [
+            "start_time = time.time()",
+            "${1:code_to_measure}",
+            "elapsed_time = time.time() - start_time"
+        ],
+        "description": "Measure execution time",
+        "category": "Performance",
+        "tags": [
+            "time",
+            "performance"
+        ]
+    },
+    "Dataclass": {
+        "prefix": "dc",
+        "body": [
+            "@dataclass",
+            "class ${1:ClassName}:",
+            "    ${2:field_name}: ${3:type}"
+        ],
+        "description": "Dataclass definition",
+        "category": "Classes",
+        "tags": [
+            "dataclass",
+            "class"
+        ]
+    },
+    "Type Hint": {
+        "prefix": "type",
+        "body": [
+            "def ${1:function_name}(${2:parameter}: ${3:type}) -> ${4:return_type}:",
+            "    ${5:pass}"
+        ],
+        "description": "Function with type hints",
+        "category": "Type Hints",
+        "tags": [
+            "typing",
+            "hint"
+        ]
+    },
+    "Subprocess Run": {
+        "prefix": "run",
+        "body": [
+            "result = subprocess.run(",
+            "    ['${1:command}'],",
+            "    capture_output=True,",
+            "    text=True",
+            ")"
+        ],
+        "description": "Run shell command",
+        "category": "System",
+        "tags": [
+            "subprocess",
+            "shell"
+        ]
+    },
+    "Pathlib Path": {
+        "prefix": "path",
+        "body": [
+            "path = Path('${1:filepath}')"
+        ],
+        "description": "Pathlib path object",
+        "category": "File System",
+        "tags": [
+            "path",
+            "filesystem"
+        ]
+    },
+    "HTTP Request": {
+        "prefix": "req",
+        "body": [
+            "response = requests.${1:get}('${2:url}')",
+            "response.raise_for_status()",
+            "data = response.json()"
+        ],
+        "description": "HTTP request using requests library",
+        "category": "Network",
+        "tags": [
+            "http",
+            "api"
+        ]
+    },
+    "CSV Read": {
+        "prefix": "csv-read",
+        "body": [
+            "with open('${1:filename}.csv', 'r') as f:",
+            "    reader = csv.DictReader(f)",
+            "    data = [row for row in reader]"
+        ],
+        "description": "Read CSV file",
+        "category": "Data",
+        "tags": [
+            "csv",
+            "read"
+        ]
+    },
+    "CSV Write": {
+        "prefix": "csv-write",
+        "body": [
+            "with open('${1:filename}.csv', 'w', newline='') as f:",
+            "    writer = csv.DictWriter(f, fieldnames=${2:fieldnames})",
+            "    writer.writeheader()",
+            "    writer.writerows(${3:data})"
+        ],
+        "description": "Write CSV file",
+        "category": "Data",
+        "tags": [
+            "csv",
+            "write"
+        ]
+    },
+    "Pandas DataFrame": {
+        "prefix": "pdf",
+        "body": [
+            "df = pd.DataFrame(",
+            "    ${1:data},",
+            "    columns=[${2:columns}]",
+            ")"
+        ],
+        "description": "Create Pandas DataFrame",
+        "category": "Data Analysis",
+        "tags": [
+            "pandas",
+            "dataframe"
+        ]
+    },
+    "NumPy Array": {
+        "prefix": "np",
+        "body": [
+            "arr = np.array(${1:data}, dtype=${2:np.float64})"
+        ],
+        "description": "Create NumPy array",
+        "category": "Data Analysis",
+        "tags": [
+            "numpy",
+            "array"
+        ]
+    },
+    "Plot Matplotlib": {
+        "prefix": "plt",
+        "body": [
+            "plt.figure(figsize=(${1:10}, ${2:6}))",
+            "plt.plot(${3:x}, ${4:y})",
+            "plt.title('${5:title}')",
+            "plt.xlabel('${6:xlabel}')",
+            "plt.ylabel('${7:ylabel}')",
+            "plt.show()"
+        ],
+        "description": "Matplotlib plot",
+        "category": "Visualization",
+        "tags": [
+            "matplotlib",
+            "plot"
+        ]
+    },
+    "SQLAlchemy Model": {
+        "prefix": "sqlm",
+        "body": [
+            "class ${1:ModelName}(Base):",
+            "    __tablename__ = '${2:table_name}'",
+            "",
+            "    id = Column(Integer, primary_key=True)",
+            "    ${3:column_name} = Column(${4:String})"
+        ],
+        "description": "SQLAlchemy model class",
+        "category": "Database",
+        "tags": [
+            "sqlalchemy",
+            "orm"
+        ]
+    },
+    "FastAPI Route": {
+        "prefix": "fapr",
+        "body": [
+            "@app.${1:get}('/${2:path}')",
+            "async def ${3:function_name}(${4:parameters}):",
+            "    return {'${5:key}': ${6:value}}"
+        ],
+        "description": "FastAPI route",
+        "category": "Web",
+        "tags": [
+            "fastapi",
+            "route"
+        ]
+    },
+    "Pydantic Model": {
+        "prefix": "pyd",
+        "body": [
+            "class ${1:ModelName}(BaseModel):",
+            "    ${2:field_name}: ${3:type}",
+            "    ${4:optional_field}: Optional[${5:type}] = None"
+        ],
+        "description": "Pydantic model",
+        "category": "Validation",
+        "tags": [
+            "pydantic",
+            "model"
+        ]
+    },
+    "Pytest Fixture": {
+        "prefix": "fix",
+        "body": [
+            "@pytest.fixture",
+            "def ${1:fixture_name}():",
+            "    ${2:setup_code}",
+            "    yield ${3:fixture_value}",
+            "    ${4:cleanup_code}"
+        ],
+        "description": "Pytest fixture",
+        "category": "Testing",
+        "tags": [
+            "pytest",
+            "fixture"
+        ]
+    },
+    "Async Context Manager": {
+        "prefix": "actx",
+        "body": [
+            "class ${1:ClassName}:",
+            "    async def __aenter__(self):",
+            "        ${2:setup_code}",
+            "        return self",
+            "",
+            "    async def __aexit__(self, exc_type, exc_val, exc_tb):",
+            "        ${3:cleanup_code}"
+        ],
+        "description": "Async context manager",
+        "category": "Async",
+        "tags": [
+            "async",
+            "context"
+        ]
+    },
+    "Thread Pool": {
+        "prefix": "thp",
+        "body": [
+            "with ThreadPoolExecutor(max_workers=${1:4}) as executor:",
+            "    futures = [executor.submit(${2:function}, ${3:arg}) for ${4:arg} in ${5:args}]",
+            "    results = [f.result() for f in futures]"
+        ],
+        "description": "Thread pool executor",
+        "category": "Concurrency",
+        "tags": [
+            "thread",
+            "pool"
+        ]
+    },
+    "Process Pool": {
+        "prefix": "prc",
+        "body": [
+            "with ProcessPoolExecutor(max_workers=${1:4}) as executor:",
+            "    futures = [executor.submit(${2:function}, ${3:arg}) for ${4:arg} in ${5:args}]",
+            "    results = [f.result() for f in futures]"
+        ],
+        "description": "Process pool executor",
+        "category": "Concurrency",
+        "tags": [
+            "process",
+            "pool"
+        ]
+    },
+    "Asyncio Task": {
+        "prefix": "task",
+        "body": [
+            "task = asyncio.create_task(${1:coroutine})",
+            "try:",
+            "    result = await task",
+            "except Exception as e:",
+            "    print(f'Task failed: {e}')"
+        ],
+        "description": "Asyncio task",
+        "category": "Async",
+        "tags": [
+            "asyncio",
+            "task"
+        ]
+    },
+    "Queue Worker": {
+        "prefix": "qwk",
+        "body": [
+            "async def worker(queue: asyncio.Queue):",
+            "    while True:",
+            "        item = await queue.get()",
+            "        try:",
+            "            await process_item(item)",
+            "        except Exception as e:",
+            "            print(f'Error processing {item}: {e}')",
+            "        finally:",
+            "            queue.task_done()"
+        ],
+        "description": "Async queue worker",
+        "category": "Async",
+        "tags": [
+            "queue",
+            "worker"
+        ]
+    },
+    "Cache Decorator": {
+        "prefix": "cache",
+        "body": [
+            "@functools.lru_cache(maxsize=${1:128})",
+            "def ${2:function_name}(${3:parameters}):",
+            "    ${4:pass}"
+        ],
+        "description": "LRU cache decorator",
+        "category": "Performance",
+        "tags": [
+            "cache",
+            "decorator"
+        ]
+    },
+    "Enum Class": {
+        "prefix": "enum",
+        "body": [
+            "class ${1:EnumName}(Enum):",
+            "    ${2:MEMBER1} = ${3:value1}",
+            "    ${4:MEMBER2} = ${5:value2}"
+        ],
+        "description": "Enum class",
+        "category": "Types",
+        "tags": [
+            "enum",
+            "type"
+        ]
+    },
+    "Abstract Class": {
+        "prefix": "abc",
+        "body": [
+            "class ${1:ClassName}(ABC):",
+            "    @abstractmethod",
+            "    def ${2:method_name}(self, ${3:parameters}):",
+            "        pass"
+        ],
+        "description": "Abstract base class",
+        "category": "Classes",
+        "tags": [
+            "abstract",
+            "class"
+        ]
+    },
+    "Protocol Class": {
+        "prefix": "proto",
+        "body": [
+            "class ${1:ProtocolName}(Protocol):",
+            "    def ${2:method_name}(self, ${3:parameters}) -> ${4:return_type}:",
+            "        ..."
+        ],
+        "description": "Protocol class",
+        "category": "Types",
+        "tags": [
+            "protocol",
+            "type"
+        ]
+    },
+    "Config Parser": {
+        "prefix": "cfg",
+        "body": [
+            "config = configparser.ConfigParser()",
+            "config.read('${1:config.ini}')",
+            "value = config['${2:section}']['${3:key}']"
+        ],
+        "description": "Config parser",
+        "category": "Configuration",
+        "tags": [
+            "config",
+            "parser"
+        ]
+    },
+    "Environment Variables": {
+        "prefix": "env",
+        "body": [
+            "from dotenv import load_dotenv",
+            "load_dotenv()",
+            "${1:variable} = os.getenv('${2:ENV_VAR}', '${3:default_value}')"
+        ],
+        "description": "Load environment variables",
+        "category": "Configuration",
+        "tags": [
+            "env",
+            "config"
+        ]
+    }
+}
