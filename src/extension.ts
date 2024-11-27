@@ -3,10 +3,15 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { SnippetWebviewPanel } from './SnippetWebviewPanel';
 import { Snippet, SnippetDictionary } from './types';
+import { initializeTelemetryReporter, TelemetryLog } from "./telemetry";
 
 export function activate(context: vscode.ExtensionContext) {
+    initializeTelemetryReporter(context);
+    TelemetryLog('info', 'Extension activated');
+
     // Register the original quickpick command
     let quickPickDisposable = vscode.commands.registerCommand('python-snippets.showSnippets', async () => {
+        TelemetryLog('info', 'Show snippets command invoked');
         try {
             const snippetsPath = path.join(context.extensionPath, 'snippets', 'snippets.json');
             const snippetsContent = fs.readFileSync(snippetsPath, 'utf8');
@@ -33,12 +38,14 @@ export function activate(context: vscode.ExtensionContext) {
                 }
             }
         } catch (error) {
+            TelemetryLog('error', 'Error loading snippets', { error: (error as Error).message });
             vscode.window.showErrorMessage('Error loading snippets: ' + (error as Error).message);
         }
     });
 
     // Register the webview command
     let webviewDisposable = vscode.commands.registerCommand('python-snippets.showSnippetsWebview', () => {
+        TelemetryLog('info', 'Show snippets webview command invoked');
         SnippetWebviewPanel.createOrShow(context.extensionPath);
     });
 

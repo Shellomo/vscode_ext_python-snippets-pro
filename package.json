@@ -2,7 +2,7 @@
   "name": "python-snippets-pro",
   "displayName": "Python Snippets Pro",
   "description": "✨ Modern Python (3) snippets with a beautiful UI browser. Boost your productivity with customizable, searchable code snippets.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "Shellomo",
   "icon": "media/logo.png",
   "license": "MIT",
@@ -30,6 +30,7 @@
     "not-ai-but-snippets"
   ],
   "activationEvents": [
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -57,8 +58,11 @@
     "lint": "eslint src --ext ts",
     "pretest": "npm run compile && npm run lint"
   },
+  "dependencies": {
+    "@vscode/extension-telemetry": "^0.9.8"
+  },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
+    "@types/vscode": "^1.60.0",
     "@types/node": "^20.x",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
